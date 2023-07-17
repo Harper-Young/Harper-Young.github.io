@@ -20,18 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="做三四月的事，八九月自有答案">
+  <meta name="description" content="基于无线信号与酒精传感器的智能酒驾检测整体介绍酒后驾驶是交通事故的重要诱因之一，而目前针对酒后驾驶的检测更多依赖于交警设立拦截点进行吹气检测或抽血检测，尽管这样测量结果比较准确，但是不能对全部车辆进行监控，仍然会有饮酒后驾驶车辆的行为发生。因此，我们需要一款能够对驾驶员是否饮酒进行实时的精确检测的方法，实现酒后驾驶检测的普遍化、智能化。无线感知是一种通过分析无线信号在传播过程的变化来获取目标信息的">
 <meta property="og:type" content="website">
 <meta property="og:title" content="酒驾检测">
 <meta property="og:url" content="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="做三四月的事，八九月自有答案">
+<meta property="og:site_name" content="杨智华">
+<meta property="og:description" content="基于无线信号与酒精传感器的智能酒驾检测整体介绍酒后驾驶是交通事故的重要诱因之一，而目前针对酒后驾驶的检测更多依赖于交警设立拦截点进行吹气检测或抽血检测，尽管这样测量结果比较准确，但是不能对全部车辆进行监控，仍然会有饮酒后驾驶车辆的行为发生。因此，我们需要一款能够对驾驶员是否饮酒进行实时的精确检测的方法，实现酒后驾驶检测的普遍化、智能化。无线感知是一种通过分析无线信号在传播过程的变化来获取目标信息的">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/deploy.jpg">
+<meta property="og:image" content="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/overview.jpg">
+<meta property="og:image" content="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/web.gif">
+<meta property="og:image" content="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/rfiddeploy.jpg">
 <meta property="article:published_time" content="2023-07-16T06:52:59.000Z">
-<meta property="article:modified_time" content="2023-07-16T06:52:59.577Z">
+<meta property="article:modified_time" content="2023-07-17T13:45:49.580Z">
 <meta property="article:author" content="Yang Zhihua">
 <meta property="article:tag" content="C++, Python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/deploy.jpg">
 
 <link rel="canonical" href="http://example.com/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/">
 
@@ -46,7 +51,7 @@
   };
 </script>
 
-  <title>酒驾检测 | Hexo
+  <title>酒驾检测 | 杨智华
 </title>
   
 
@@ -98,9 +103,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">杨智华</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">天津大学 硕士生在读</p>
   </div>
 
   <div class="site-nav-right">
@@ -114,11 +120,6 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
         <li class="menu-item menu-item-振动检测">
 
     <a href="/%E6%8C%AF%E5%8A%A8%E6%A3%80%E6%B5%8B/" rel="section"><i class="fa fa-th fa-fw"></i>振动检测</a>
@@ -185,7 +186,14 @@
       
       
       <div class="post-body">
-          
+          <h1 id="基于无线信号与酒精传感器的智能酒驾检测"><a href="#基于无线信号与酒精传感器的智能酒驾检测" class="headerlink" title="基于无线信号与酒精传感器的智能酒驾检测"></a>基于无线信号与酒精传感器的智能酒驾检测</h1><h1 id="整体介绍"><a href="#整体介绍" class="headerlink" title="整体介绍"></a>整体介绍</h1><p>酒后驾驶是交通事故的重要诱因之一，而目前针对酒后驾驶的检测更多依赖于交警设立拦截点进行吹气检测或抽血检测，尽管这样测量结果比较准确，但是不能对全部车辆进行监控，仍然会有饮酒后驾驶车辆的行为发生。因此，我们需要一款能够对驾驶员是否饮酒进行实时的精确检测的方法，实现酒后驾驶检测的普遍化、智能化。<br><strong>无线感知</strong>是一种通过分析无线信号在传播过程的变化来获取目标信息的方式，具备<strong>无接触(Contactless)、无线(Wireless)、无传感器(Sensorless)</strong> 的特点，相较于穿戴设备的硬性要求，使用无线信号无需佩戴设备，可智能检测到人员位置及其他信息，相较于视觉保护个人隐私等特性。<br>本项目的核心思路为使用无线信号检测车内人员的胸腔位移来作为<strong>人员的呼吸曲线</strong>，并且使用酒精气体浓度传感器采集<strong>车内的酒精浓度变化</strong>，因为酒精浓度的变化与饮酒人员的呼吸具备一定的相关性，所以我们可以通过<strong>对比不同人员的呼吸曲线与酒精曲线的相似度</strong>来对饮酒人员进行区分，从而达到无需接触、普遍检测、智能判定酒驾的效果。最终在真实驾驶情形下进行测试达到了<strong>82%</strong> 的区分准确度，并且在网站上进行了展示。<br>该项目最终获得了<strong>网络技术挑战赛的全国二等奖</strong>以及申请了一项<strong>发明专利</strong>。</p>
+<h1 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h1><p><img src="/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/deploy.jpg" alt="部署效果图"><br>整体部署效果如上图所示，将<strong>酒精传感器</strong> 部署于方向盘上，使用MQ-3酒精气体浓度传感器，他将气体中的酒精浓度有将<strong>UWB雷达(Ultra Wide Band Radar)</strong> 部署于中控台上可以检测到尽可能多的人员呼吸，UWB雷达利用纳秒级的非正弦波窄脉冲传输数据，传输速度高，并且可以有效穿透介质，精确定位，在多人环境下发挥作用。</p>
+<p><img src="/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/overview.jpg" alt="整体流程图"><br><strong>预处理模块</strong> 中，呼吸检测模块实时检测驾驶员和所有乘客的呼吸信号，完成相应的去离群值、基线偏移和离散小波变换和巴特沃斯滤波等信号处理，分析呼吸状态是否正常，可以判断是否存在呼吸暂停、呼吸急促或其他异常情况；酒精检测模块实时检测驾驶室内的酒精浓度，并根据阈值判断浓度是否超标。<br><strong>判定模块</strong> 中，异常检测模块使用轻量化的深度学习模型长短期记忆网络（LSTM）完成时间序列预测，并完成与实时数据的比对从而判断呼吸信号是否存在异常值，通过异常值的时间序列对比完成驾驶员是否酒驾的快速判断。呼吸匹配部分对于呼吸曲线与酒精浓度曲线使用支持向量机（SVM）和改良的动态时间规整算法（DTW）进行相似度的对比，最终完成酒驾匹配检测。<br><strong>扩展模块</strong> 中，完成了可视化界面展示，结合激光雷达等技术，实现更加精准、高效、全天候的智慧驾驶监测系统，全方位呵护驾驶员和乘客的安全，并且可以扩展增加报警提示功能等。</p>
+<h1 id="网站展示"><a href="#网站展示" class="headerlink" title="网站展示"></a>网站展示</h1><p>我们基于streamlit框架做了数据的网站可视化展示，并且部署到了服务器上以供访问。<br><img src="/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/web.gif" alt="网站效果图"></p>
+<h1 id="无线信号选择"><a href="#无线信号选择" class="headerlink" title="无线信号选择"></a>无线信号选择</h1><h2 id="RFID"><a href="#RFID" class="headerlink" title="RFID"></a>RFID</h2><p><strong>RFID</strong>是目前工业界比较成熟的一种无线通信技术，电子标签接收到天线发送特殊的射频信号可以反射回存储在其芯片中的产品信息，通过分析反射信号，我们可以获得指定标签的相关信息。我们使用RFID标签同样进行了测试，数据采集的代码使用<strong>JAVA</strong>撰写，数据处理的代码使用<strong>Python</strong>撰写，部署示意图如下，但由于RFID波长较长（~33cm），在检测微小振动时不够灵敏，且需要部署电子标签到安全带上，在未系安全带的情况下无法进行检测，因此后续未继续开展研究。</p>
+<p><img src="/%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B/rfiddeploy.jpg" alt="网站效果图"></p>
+<h2 id="毫米波雷达"><a href="#毫米波雷达" class="headerlink" title="毫米波雷达"></a>毫米波雷达</h2><p>我们同样考虑使用毫米波雷达来做相关实验，具有频带宽、波长短等基本特性，具备测距、测速、测方位角、微动探测和4D成像等功能，我们在实际场景中进行测试，其中毫米波雷达的配置文件使用<strong>lua</strong>语言，信号处理使用<strong>matlab</strong>来完成，由于车内多径效应强且毫米波雷达较为昂贵，不适用于在车上全部部署，因此后续未继续开展研究。<br>在比较了其他相关的无线信号后使用了UWB来做本次工作。</p>
+
       </div>
       
       
@@ -246,6 +254,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E6%97%A0%E7%BA%BF%E4%BF%A1%E5%8F%B7%E4%B8%8E%E9%85%92%E7%B2%BE%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E6%99%BA%E8%83%BD%E9%85%92%E9%A9%BE%E6%A3%80%E6%B5%8B"><span class="nav-number">1.</span> <span class="nav-text">基于无线信号与酒精传感器的智能酒驾检测</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">整体介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">整体架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA"><span class="nav-number">4.</span> <span class="nav-text">网站展示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E4%BF%A1%E5%8F%B7%E9%80%89%E6%8B%A9"><span class="nav-number">5.</span> <span class="nav-text">无线信号选择</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RFID"><span class="nav-number">5.1.</span> <span class="nav-text">RFID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%AB%E7%B1%B3%E6%B3%A2%E9%9B%B7%E8%BE%BE"><span class="nav-number">5.2.</span> <span class="nav-text">毫米波雷达</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -255,21 +264,6 @@
       src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Yang Zhihua</p>
   <div class="site-description" itemprop="description">做三四月的事，八九月自有答案</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-  </nav>
 </div>
 
 
