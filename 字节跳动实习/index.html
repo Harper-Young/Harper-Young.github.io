@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://example.com/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%AE%9E%E4%B9%A0/pri.jpg">
 <meta property="og:image" content="http://example.com/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%AE%9E%E4%B9%A0/tab.jpg">
 <meta property="article:published_time" content="2023-07-16T06:53:39.000Z">
-<meta property="article:modified_time" content="2023-07-17T14:18:47.465Z">
+<meta property="article:modified_time" content="2023-07-19T13:09:53.061Z">
 <meta property="article:author" content="Yang Zhihua">
 <meta property="article:tag" content="C++, Python">
 <meta name="twitter:card" content="summary">
@@ -185,8 +185,16 @@
       
       <div class="post-body">
           <h1 id="实习经历"><a href="#实习经历" class="headerlink" title="实习经历"></a>实习经历</h1><p>于2020年7月至2020年12月于字节跳动实习，岗位为iOS研发实习生-抖音社交，主要的工作内容为进行iOS研发工作，同时与PM、QA、Server、安卓同学进行沟通以及配合，进行代码撰写以及功能实现等，此外还在业务空闲期间内自主开发小组件避免重复工作，提升工作体验。</p>
-<h1 id="隐私引导"><a href="#隐私引导" class="headerlink" title="隐私引导"></a>隐私引导</h1><p>出于进一步提升用对于系统隐私设置的感知，提升用户体验的考虑，希望通过<strong>卡片</strong>或者<strong>弹窗</strong>的方式告知用户隐私可以设置。主要进行的工作为在个人主页中添加了隐私引导卡片，点击卡片出现弹窗进行设置或前往隐私设置界面进行设置，本需求共计有六种隐私需要引导，每一种隐私都有一种卡片以及对应的弹窗。<br>在本需求中<strong>抽取了弹窗和卡片的基类</strong>，从而针对不同类型的数据达到代码复用的效果，并且外加了一个<strong>总控开关</strong>，由服务端下发字段控制，在出现问题时可以马上关闭功能，减少损失。<br><img src="/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%AE%9E%E4%B9%A0/pri.jpg" alt="隐私引导"></p>
-<h1 id="私密tab外放"><a href="#私密tab外放" class="headerlink" title="私密tab外放"></a>私密tab外放</h1><p>在一天可见视频上线后有越来越多的视频转为私密状态，为了提升隐私视频的二次使用率，我们做了将私密tab外放替换动态tab的尝试。本次需求较为困难，由于私密页面从来没有放到过个人主页的 tab 中，所以需要重构整个代码，并且由于实验需要在同一个文件中进行两种样式的兼容，个<br>人主页牵扯很广，在后续经过数次修复后最终全量上线。<br><img src="/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%AE%9E%E4%B9%A0/tab.jpg" alt="私密tab"></p>
+<h1 id="隐私引导"><a href="#隐私引导" class="headerlink" title="隐私引导"></a>隐私引导</h1><p>出于进一步提升用对于系统隐私设置的感知，提升用户体验的考虑，希望通过<strong>卡片</strong>或者<strong>弹窗</strong>的方式告知用户隐私可以设置。主要进行的工作为在个人主页中添加了隐私引导卡片，点击卡片出现弹窗进行设置或前往隐私设置界面进行设置，本需求共计有六种隐私需要引导，每一种隐私都有一种卡片以及对应的弹窗。<br>在本需求中<strong>抽取了弹窗和卡片的基类</strong>，从而针对不同类型的数据达到代码复用的效果，并且外加了一个<strong>总控开关</strong>，由服务端下发字段控制，在出现问题时可以马上关闭功能，减少损失。</p>
+<div style="width: 50%; margin: auto">
+    <img src="/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%AE%9E%E4%B9%A0/pri.jpg" alt="隐私引导">
+</div>
+
+<h1 id="私密tab外放"><a href="#私密tab外放" class="headerlink" title="私密tab外放"></a>私密tab外放</h1><p>在一天可见视频上线后有越来越多的视频转为私密状态，为了提升隐私视频的二次使用率，我们做了将私密tab外放替换动态tab的尝试。本次需求较为困难，由于私密页面从来没有放到过个人主页的 tab 中，所以需要重构整个代码，并且由于实验需要在同一个文件中进行两种样式的兼容，个<br>人主页牵扯很广，在后续经过数次修复后最终全量上线。</p>
+<div style="width: 30%; margin: auto">
+    <img src="/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%AE%9E%E4%B9%A0/tab.jpg" alt="私密tab">
+</div>
+
 <h1 id="社交工具人"><a href="#社交工具人" class="headerlink" title="社交工具人"></a>社交工具人</h1><p>在需求较少的时间段内为了提高大家的工作效率与安卓同学协作开发的，在离职之前主要包含<strong>定时提醒、会议主持人、版本日历提醒、技术方案创建功能</strong>，使用 <strong>JS</strong> 语言在飞书轻服务平台进行实现的。其中会议主持人为最重要的功能，在其中可以设置会议的重复周期、会议名称、提前创建好会议文档并且支持从上一周的文档进行复制，在规定的时间提醒填写文档或开会功能，可以减少在开周会时耗费人力进行重复的文档创建以及提醒工作。而技术方案创建则是主持人的另一种演变，由于部门要求所有的需求都需要参考模板撰写技术方案放到公共的文件夹下，寻找该文件夹、复制模板、新建技术方案步骤冗余，使用社交工具人，输入需求名称即可一键生成技术方案并放置指定位置，提升开发体验。</p>
 
       </div>
